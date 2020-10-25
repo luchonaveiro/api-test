@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 with open('db/config.json', 'r') as f:
     config = json.load(f)
 
- Create DB connection
+# Create DB connection
 ddb = boto3.resource('dynamodb',
                      aws_access_key_id=config['ACCESS_KEY'],
                      aws_secret_access_key=config['SECRET_KEY'],

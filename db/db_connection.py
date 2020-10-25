@@ -8,7 +8,7 @@ logger = logging.getLogger(__name__)
 with open('db/config.json', 'r') as f:
     config = json.load(f)
 
-# Create DB connection
+## Create DB connection
 def get_conn():
     logger.info('Connecting to DB...')
     conn = psycopg2.connect(database=config['DATABASE'],

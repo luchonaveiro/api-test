@@ -10,10 +10,10 @@ with open('db/config.json', 'r') as f:
 
 # Create DB connection
 ddb = boto3.resource('dynamodb',
-                     aws_access_key_id=config['ACCESS_KEY'],
-                     aws_secret_access_key=config['SECRET_KEY'],
-                     aws_session_token=config['SESSION_TOKEN'],
-                     region_name='us-east-1')
+                     aws_access_key_id=config['AWS_ACCESS_KEY'],
+                     aws_secret_access_key=config['AWS_SECRET_KEY'],
+                     aws_session_token=config['AWS_SESSION_TOKEN'],
+                     region_name=config['AWS_REGION'])
 
 def get_user(user_id):
 

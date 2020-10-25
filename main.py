@@ -14,6 +14,10 @@ logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
 
+@app.route('/test', methods=['GET'])
+def test():
+    return 'Hi from AWS'
+
 # Define user endpoint
 @app.route('/users', defaults={'user_id':''}, methods=['POST'])
 @app.route('/users/<path:user_id>', methods=['GET','DELETE','PUT'])

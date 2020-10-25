@@ -15,6 +15,8 @@ ddb = boto3.resource('dynamodb',
                      aws_session_token=config['AWS_SESSION_TOKEN'],
                      region_name=config['AWS_REGION'])
 
+users_table = ddb.Table('users')
+
 def get_user(user_id):
 
     logger.info('getting {} data from database...'.format(user_id))
